@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h> // Für die fabs-Funktion
 
-double sqrt_heron(double a, double epsilon);
+double sqrt_heron(double a, double epsilon); //Funktion Deklaration
 
 int main() {
     double y = 0.0; // Die Variablen sollten vom Typ double sein
@@ -21,7 +21,7 @@ int main() {
     return 0;
 }
 
-double sqrt_heron(double a, double epsilon) {
+double sqrt_heron(double a, double epsilon) { //Funktion Definition
     double x_n = a; // Startwert für die Iteration, könnte auch ein anderer Wert sein
     double x_next;
 
