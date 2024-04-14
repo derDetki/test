@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ottodetki/Documents/GitHub/test/FH/stack'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003DE4, symSize: 0x80 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003DE4, symSize: 0x80 }
+  - { offsetInCU: 0x77, offset: 0x77, size: 0x8, addend: 0x0, symName: _push, symObjAddr: 0x80, symBinAddr: 0x100003E64, symSize: 0x7C }
+  - { offsetInCU: 0xA9, offset: 0xA9, size: 0x8, addend: 0x0, symName: _pop, symObjAddr: 0xFC, symBinAddr: 0x100003EE0, symSize: 0x78 }
+...
