@@ -11,9 +11,9 @@ int main(int argc, char *argv[]) {
     // Überprüfen, ob genau zwei Argumente übergeben wurden (Programmname + 2 Dateinamen)
     if(argc != 3) {
         // Wenn nicht, Ausgabe einer Fehlermeldung und Beendigung des Programms mit Fehlercode 1
-        fprintf(stderr, "Verwendung: %s <datei1> <datei2>\n", argv[0]);
+        fprintf(stderr, "Verwendung: %s <datei1> <datei2>\n", argv[0]); // "standard error"
         return 1;
-    }
+    } // Hilfe/Tipp vom Herrn T. Anders 26.04.24
 
     // Erste Datei zum Lesen zu öffnen
     FILE *file1 = fopen(argv[1], "r");
@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
         if(file1 != NULL) fclose(file1);
         if(file2 != NULL) fclose(file2);
         return 1;
-    }
+    } // Hilfe/Tipp vom Herrn T. Anders 26.04.24
 
     // Ausgabedatei Schreiben
     FILE *outputFile = fopen("vergleichErgebnis.txt", "w"); // Datei öffnen
@@ -39,6 +39,7 @@ int main(int argc, char *argv[]) {
         // Freigabe von Ressourcen und Programmende mit Fehlercode
         fclose(file1);   // ;-) clesn code
         fclose(file2);   //  -||-
+                         // Hilfe/Tipp vom Herrn T. Anders 26.04.24
         return 1;
     }
 
@@ -48,12 +49,12 @@ int main(int argc, char *argv[]) {
     while(fscanf(file1, "%d", &num1) != EOF && fscanf(file2, "%d", &num2) != EOF) {
         // Vergleich der gelesenen Zahlen und Schreiben des Ergebnisses in die Ausgabedatei
         if(num1 > num2) {
-            fputc('L', outputFile);  // L für links, wenn die Zahl in der ersten Datei größer ist
+            fputc('L', outputFile);  // L wird geschrieben -> für links, wenn die Zahl in der ersten Datei größer ist
         } else if(num2 > num1) {
-            fputc('R', outputFile);  // R für rechts, wenn die Zahl in der zweiten Datei größer ist
+            fputc('R', outputFile);  // R wird geschrieben -> für rechts, wenn die Zahl in der zweiten Datei größer ist
         }
         fputc('\n', outputFile);  // Zeilenumbruch hinzufügen nach jeder geschriebenen Ausgabe
-    }
+    }                             // Hilfe/Tipp vom Herrn T. Anders 26.04.24
 
     // Schließen aller geöffneten Dateien und Freigabe von Ressourcen
     fclose(file1);

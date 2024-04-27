@@ -18,14 +18,16 @@ int main() {
 
     // Überprüfe, ob die Dateien erfolgreich geöffnet wurden
     if (eingabeDatei == NULL || ausgabeDatei == NULL) {
-        perror("Fehler beim Oeffnen der Dateien");
+        perror("Fehler beim Oeffnen der Dateien"); // Standardisierte Fehlermeldung
         return EXIT_FAILURE; // Beende das Programm mit einem Fehlercode
     }
 
+
+
     // Lies Zeilen aus der Eingabedatei bis zum Ende der Datei
-    while (fgets(zeile, sizeof(zeile), eingabeDatei) != NULL) {
+    while (fgets(zeile, sizeof(zeile), eingabeDatei) != NULL) { // Zeile wird gelesen
         // Überprüfe, ob die aktuelle Zeile eine Zahl ist
-        if (sscanf(zeile, "%d", &zahl) == 1) {
+        if (sscanf(zeile, "%d", &zahl) == 1) { // Zahl wird ausgelesen
             summe += zahl; // Zahl zur Summe hinzufügen
         }
         // Überprüfe, ob die aktuelle Zeile eine Leerzeile ist
@@ -37,6 +39,8 @@ int main() {
             }
         }
     }
+
+
 
     // Überprüfe, ob am Ende noch eine Summe vorhanden ist
     if (summe > 0) {
