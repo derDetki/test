@@ -3,56 +3,39 @@
 // einer positiven Zahl bis zu einer angegebenen Genauigkeit berechnet.
 
 #include <stdio.h>
-#include <math.h> // Für die fabs-Funktion
+#include <math.h> // Für die "fabs"-Funktion
 
-double sqrt_heron(double a, double epsilon); //Funktion Deklaration
+double sqrt_heron_recursive(double a, double epsilon, double x_n); // Rekursive Hilfsfunktion 
+double sqrt_heron(double a, double epsilon); // Hilfs-Funktion
 
 int main() {
-    double y = 0.0; // Die Variablen sollten vom Typ double sein
-    double z = 0.0; // für die Quadratwurzelberechnung und die Genauigkeit
+    double zahl = 0.0, genauigkeit = 0.0;
 
-    printf("Bitte geben Sie zwei positive Zahlen ein (Zahl und Genauigkeit): \n");
-    scanf("%lf", &y);
-    scanf("%lf", &z);
-   
-    if (y <= 0 || z <= 0) {
-        printf("Die Eingabe ist ungültig!\n");
+    printf("Bitte geben Sie eine positive Zahl, von der die Quadratwurzel ermittelt werden soll ein und die gewünschte Genauigkeit: \n");
+    scanf("%lf %lf", &zahl, &genauigkeit);
+
+    if (zahl <= 0 || genauigkeit <= 0) {
+        printf("Die Eingabe ist ungültig. Bitte positive Zahlen eingeben!\n");
     } else {
-        double ergebnis = sqrt_heron(y, z); // Ruft die Quadratwurzelfunktion auf
-        printf("Das Ergebnis ist: %lf\n", ergebnis); // Gibt das Ergebnis aus
+        double ergebnis = sqrt_heron(zahl, genauigkeit);
+        printf("Das Ergebnis ist: %lf\n", ergebnis);
     }
 
     return 0;
 }
+//  Der weitere Code wurde mit Hilfe vom Herrn T. Anders am 21.04.24 erstellt
+// Wrapper-Funktion, die die Rekursion initiiert
 double sqrt_heron(double a, double epsilon) {
-    double x_n = a; // Startwert für die Iteration
-    double x_next = 0.0;
-
-    do {
-        x_next = 0.5 * (x_n + a / x_n); // Berechnet die nächste Näherung
-        if (fabs(x_next - x_n) < epsilon) { // Prüft, ob die Genauigkeit erreicht ist
-            break; // Beendet die Schleife, wenn die Genauigkeit erreicht ist
-        }
-        x_n = x_next; // Aktualisiert x_n für den nächsten Durchlauf
-    } while (1); // Endlosschleife, die durch 'break' beendet wird
-
-    return x_next; // Gibt die berechnete Näherung zurück
+    return sqrt_heron_recursive(a, epsilon, a);
 }
 
-/* double sqrt_heron(double a, double epsilon) { //Funktion Definition
-    double x_n = a; // Startwert für die Iteration, könnte auch ein anderer Wert sein
-    double x_next;
-
-    // Schleife, die die Heron-Methode anwendet
-    do {
-        x_next = 0.5 * (x_n + a / x_n); // Berechnet die nächste Näherung
-        // Wiederholt die Schleife, bis die Differenz zwischen zwei aufeinander folgenden
-        // Näherungen kleiner als epsilon ist
-    } while (fabs(x_next - x_n) > epsilon); // Die Funktion "fabs" berechnet den absoluten
-                                            // Wert einer Gleitkommazahl, was in diesem Fall
-                                            // dazu dient, die absolute Differenz zwischen 
-                                            //zwei aufeinanderfolgenden Näherungswerten zu bestimmen,
-                                            //um zu überprüfen, ob die Genauigkeit des Epsilon-Kriteriums erfüllt ist.
-
-    return x_next; // Gibt die berechnete Näherung zurück
-}*/
+// Rekursive Funktion, die das Heron-Verfahren implementiert
+double sqrt_heron_recursive(double a, double epsilon, double x_n) {
+    double x_next = 0.5 * (x_n + a / x_n); // Berechnet die nächste Näherung
+    if (fabs(x_next - x_n) < epsilon) { // Prüft, ob die Genauigkeit erreicht ist
+                                        // fabs erstellt den Betrag der Zahl -> immer positiver Wert
+        return x_next; // Wenn ja, beende die Rekursion
+    } else {
+        return sqrt_heron_recursive(a, epsilon, x_next); // Rekursion mit dem neuen Wert
+    }
+}
