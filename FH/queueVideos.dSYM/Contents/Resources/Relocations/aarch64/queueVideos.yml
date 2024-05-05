@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ottodetki/Documents/GitHub/test/FH/queueVideos'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _enqueue, symObjAddr: 0x0, symBinAddr: 0x100003A44, symSize: 0xA8 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _enqueue, symObjAddr: 0x0, symBinAddr: 0x100003A44, symSize: 0xA8 }
+  - { offsetInCU: 0x74, offset: 0x74, size: 0x8, addend: 0x0, symName: _dequeue, symObjAddr: 0xA8, symBinAddr: 0x100003AEC, symSize: 0xC4 }
+  - { offsetInCU: 0xAB, offset: 0xAB, size: 0x8, addend: 0x0, symName: _print_video_queue, symObjAddr: 0x16C, symBinAddr: 0x100003BB0, symSize: 0xCC }
+  - { offsetInCU: 0xF9, offset: 0xF9, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x238, symBinAddr: 0x100003C7C, symSize: 0x150 }
+...
