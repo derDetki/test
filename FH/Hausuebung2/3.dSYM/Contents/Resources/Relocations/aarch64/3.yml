@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ottodetki/Documents/GitHub/test/FH/Hausuebung2/3'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003930, symSize: 0x1B4 }
+  - { offsetInCU: 0xCB, offset: 0xCB, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003930, symSize: 0x1B4 }
+  - { offsetInCU: 0x148, offset: 0x148, size: 0x8, addend: 0x0, symName: _init_video_queue, symObjAddr: 0x1B4, symBinAddr: 0x100003AE4, symSize: 0xC8 }
+  - { offsetInCU: 0x17E, offset: 0x17E, size: 0x8, addend: 0x0, symName: _enqueue, symObjAddr: 0x27C, symBinAddr: 0x100003BAC, symSize: 0x15C }
+  - { offsetInCU: 0x1EC, offset: 0x1EC, size: 0x8, addend: 0x0, symName: _print_video_queue, symObjAddr: 0x3D8, symBinAddr: 0x100003D08, symSize: 0x100 }
+  - { offsetInCU: 0x22C, offset: 0x22C, size: 0x8, addend: 0x0, symName: _dequeue, symObjAddr: 0x4D8, symBinAddr: 0x100003E08, symSize: 0xA4 }
+...
