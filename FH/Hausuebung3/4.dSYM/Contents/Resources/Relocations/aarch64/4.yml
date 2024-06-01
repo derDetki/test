@@ -1,0 +1,14 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ottodetki/Documents/GitHub/test/FH/Hausuebung3/4'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _new_video, symObjAddr: 0x0, symBinAddr: 0x100003758, symSize: 0x78 }
+  - { offsetInCU: 0x14A, offset: 0x14A, size: 0x8, addend: 0x0, symName: _new_video, symObjAddr: 0x0, symBinAddr: 0x100003758, symSize: 0x78 }
+  - { offsetInCU: 0x18E, offset: 0x18E, size: 0x8, addend: 0x0, symName: _new_node, symObjAddr: 0x78, symBinAddr: 0x1000037D0, symSize: 0x70 }
+  - { offsetInCU: 0x1C4, offset: 0x1C4, size: 0x8, addend: 0x0, symName: _print_playlist, symObjAddr: 0xE8, symBinAddr: 0x100003840, symSize: 0x90 }
+  - { offsetInCU: 0x1F6, offset: 0x1F6, size: 0x8, addend: 0x0, symName: _append, symObjAddr: 0x178, symBinAddr: 0x1000038D0, symSize: 0xF8 }
+  - { offsetInCU: 0x23A, offset: 0x23A, size: 0x8, addend: 0x0, symName: _insert_into_tree, symObjAddr: 0x270, symBinAddr: 0x1000039C8, symSize: 0xEC }
+  - { offsetInCU: 0x28C, offset: 0x28C, size: 0x8, addend: 0x0, symName: _convert_to_tree, symObjAddr: 0x35C, symBinAddr: 0x100003AB4, symSize: 0x6C }
+  - { offsetInCU: 0x2D0, offset: 0x2D0, size: 0x8, addend: 0x0, symName: _print_tree_inorder, symObjAddr: 0x3C8, symBinAddr: 0x100003B20, symSize: 0x80 }
+  - { offsetInCU: 0x2F4, offset: 0x2F4, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x448, symBinAddr: 0x100003BA0, symSize: 0x1C8 }
+...

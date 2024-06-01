@@ -12,7 +12,7 @@ ACHTUNG: Basis-Code kopiert aus MOODLE
 https://elearn.fh-salzburg.ac.at/mod/resource/view.php?id=47966
 Autor Dorian Achim Prill (Kommentare Otto Detki)
 
-Erweiterung des Codes Zeilen 118 bis 138 und
+Erweiterung des Codes Zeilen 118 bis 138 und 164 bis 177
 Autor Otto Detki
 */
 #include <stdio.h>
