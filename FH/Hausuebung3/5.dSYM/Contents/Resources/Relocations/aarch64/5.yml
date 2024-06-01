@@ -1,0 +1,18 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ottodetki/Documents/GitHub/test/FH/Hausuebung3/5'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _new_video, symObjAddr: 0x0, symBinAddr: 0x100003510, symSize: 0x78 }
+  - { offsetInCU: 0x14A, offset: 0x14A, size: 0x8, addend: 0x0, symName: _new_video, symObjAddr: 0x0, symBinAddr: 0x100003510, symSize: 0x78 }
+  - { offsetInCU: 0x18E, offset: 0x18E, size: 0x8, addend: 0x0, symName: _new_node, symObjAddr: 0x78, symBinAddr: 0x100003588, symSize: 0x70 }
+  - { offsetInCU: 0x1C4, offset: 0x1C4, size: 0x8, addend: 0x0, symName: _print_playlist, symObjAddr: 0xE8, symBinAddr: 0x1000035F8, symSize: 0x90 }
+  - { offsetInCU: 0x1F6, offset: 0x1F6, size: 0x8, addend: 0x0, symName: _append, symObjAddr: 0x178, symBinAddr: 0x100003688, symSize: 0xF8 }
+  - { offsetInCU: 0x23A, offset: 0x23A, size: 0x8, addend: 0x0, symName: _insert_into_tree, symObjAddr: 0x270, symBinAddr: 0x100003780, symSize: 0xEC }
+  - { offsetInCU: 0x28C, offset: 0x28C, size: 0x8, addend: 0x0, symName: _convert_to_tree, symObjAddr: 0x35C, symBinAddr: 0x10000386C, symSize: 0x6C }
+  - { offsetInCU: 0x2D0, offset: 0x2D0, size: 0x8, addend: 0x0, symName: _print_tree_inorder, symObjAddr: 0x3C8, symBinAddr: 0x1000038D8, symSize: 0x80 }
+  - { offsetInCU: 0x2F4, offset: 0x2F4, size: 0x8, addend: 0x0, symName: _new_node_from_video, symObjAddr: 0x448, symBinAddr: 0x100003958, symSize: 0x70 }
+  - { offsetInCU: 0x32A, offset: 0x32A, size: 0x8, addend: 0x0, symName: _append_to_list, symObjAddr: 0x4B8, symBinAddr: 0x1000039C8, symSize: 0xA4 }
+  - { offsetInCU: 0x35C, offset: 0x35C, size: 0x8, addend: 0x0, symName: _inorder_to_list, symObjAddr: 0x55C, symBinAddr: 0x100003A6C, symSize: 0x78 }
+  - { offsetInCU: 0x39C, offset: 0x39C, size: 0x8, addend: 0x0, symName: _bst_to_list, symObjAddr: 0x5D4, symBinAddr: 0x100003AE4, symSize: 0x80 }
+  - { offsetInCU: 0x3D2, offset: 0x3D2, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x654, symBinAddr: 0x100003B64, symSize: 0x1E8 }
+...
